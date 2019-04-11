@@ -6,7 +6,7 @@ import MyApp from "./src/MyApp";
 const initState = {
   myCounter: 0
 };
-
+//Reducer
 const reducer = (state = initState, action) => {
   switch (action.type) {
     case "INC_COUNTER":
@@ -22,11 +22,14 @@ const reducer = (state = initState, action) => {
   }
   return state;
 };
+//Store ,passing reducer as parameter
 const store = createStore(reducer);
 
+//exporting class
 export default class App extends React.Component {
   render() {
     return (
+      //Proider, To make store available to all components
       <Provider store={store}>
         <MyApp />
       </Provider>

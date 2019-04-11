@@ -58,13 +58,13 @@ class MyApp extends React.Component {
     );
   }
 }
-
+//
 function mapStateToProps(state) {
   return {
     myCounter: state.myCounter
   };
 }
-
+//Function to Dispatch Action
 function mapDispatchToProps(dispatch) {
   return {
     incCounter: () =>
@@ -81,7 +81,7 @@ function mapDispatchToProps(dispatch) {
       })
   };
 }
-
+//connect connects between redux & react
 export default connect(
   mapStateToProps,
   mapDispatchToProps
